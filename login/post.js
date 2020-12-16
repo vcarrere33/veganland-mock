@@ -1,9 +1,19 @@
 const request = (headers, body, query) => {
   if (!body.phoneNumber) {
-    throw new Error('Missing phoneNumber');
+    throw {
+      success: false,
+      data: {
+        message: 'Missing phoneNumber',
+      }
+    };
   }
   if (!body.code) {
-    throw new Error('Missing code');
+    throw {
+      success: false,
+      data: {
+        message: 'Missing code',
+      }
+    };
   }
 };
 
