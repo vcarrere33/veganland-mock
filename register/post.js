@@ -1,5 +1,5 @@
 const request = (headers, body, query) => {
-  if (body.phoneNumber) {
+  if (!body.phoneNumber) {
     throw {
       success: false,
       data: {
