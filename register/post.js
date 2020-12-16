@@ -1,17 +1,9 @@
 const request = (headers, body, query) => {
-  if (!body.phoneNumber) {
+  if (body.phoneNumber) {
     throw {
       success: false,
       data: {
-        message: 'Missing phoneNumber',
-      }
-    };
-  }
-  if (!body.code) {
-    throw {
-      success: false,
-      data: {
-        message: 'Missing code',
+        message: 'Missing token',
       }
     };
   }
@@ -19,10 +11,7 @@ const request = (headers, body, query) => {
 
 const response = () => ({
   success: true,
-  data: {
-    token: 'test',
-    new: true
-  }
+  data: {},
 });
 
 // @XXX Don't forget to export methods !

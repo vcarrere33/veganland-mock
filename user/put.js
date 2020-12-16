@@ -58,31 +58,41 @@ const response = () => ({
     email: 'test@gmail.com',
     gender: 'male',
     birthday: '04/04/2000',
-    pictures: [],
-    occupation: null,
-    description: null,
+    pictures: [
+      {
+        url: 'https://resize-europe1.lanmedia.fr/f/webp/r/622,311,forcex,center-middle/img/var/europe1/storage/images/europe1/politique/evenement-jean-castex-est-linvite-exceptionnel-deurope-1-mardi-a-8h15-4011971/56435714-1-fre-FR/EVENEMENT-Jean-Castex-est-l-invite-exceptionnel-d-Europe-1-mardi-a-8h15.jpg',
+        profile: true
+      }
+    ],
+    occupation: 'J\'aime les fleurs',
+    description: 'Salut ! Salut !',
     diet: 'vegan',
-    settings: [],
+    settings: [
+      {
+        slug: 'cooking',
+        value: 'chef'
+      }
+    ],
     location: {
-      coordinates: [],
-      city: null,
-      region: null,
-      country: null
+      coordinates: [44.8428348, 0.5490573],
+      city: 'Bordeaux',
+      region: 'Aquitaine',
+      country: 'France'
     },
-    interest: null,
+    interest: 'female',
     age: {
-      min: null,
-      max: null
+      min: 10,
+      max: 30
     },
     distance: {
-      min: null,
-      max: null
+      min: 10,
+      max: 30
     },
-    distanceUnit: null,
-    premiumExpiration: null,
-    premium: false,
-    seeds: 10,
-    lastConnected: null,
+    distanceUnit: 'km',
+    premiumExpiration: '20/12/2021',
+    premium: true,
+    seeds: 5,
+    lastConnected: '20/12/2020',
     connected: false,
     status: 'active'
   },
