@@ -1,6 +1,6 @@
 const request = (headers, body, query) => {
   if (!body.phoneNumber) {
-    throw {
+    return {
       success: false,
       data: {
         message: 'Missing phoneNumber',
@@ -8,7 +8,7 @@ const request = (headers, body, query) => {
     };
   }
   if (!body.code) {
-    throw {
+    return {
       success: false,
       data: {
         message: 'Missing code',
